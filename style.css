@@ -101,7 +101,6 @@ form .inputField input::placeholder {
 
 form .inputField input.error {
   background: url(./images/icon-error.svg) no-repeat 96%;
-  color: var(--red);
   border: 2px solid var(--red);
 }
 
