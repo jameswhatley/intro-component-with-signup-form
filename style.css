@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --white: #fff;
+  --blue: hsl(248, 32%, 49%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: var(--red) url(./images/bg-intro-mobile.png) no-repeat;
+}
+
+img {
+  max-width: 100%;
+}
+
+small {
+  font-size: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.upperText {
+  text-align: center;
+  color: var(--white);
+  margin-top: 6rem;
+}
+
+.upperText h1 {
+  font-size: 2.6rem;
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+.offerCard {
+  background-color: var(--blue);
+  padding: 1.5rem 4rem;
+  color: var(--white);
+  border-radius: 1rem;
+  text-align: center;
+  margin: 3.5rem 0 2.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
+}
+
+.offerCard p {
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
+}
+
+form .inputField {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  color: var(--red);
+  font-style: italic;
+}
+
+form .inputField input {
+  padding: 1.25em;
+  border-radius: 0.5rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid lightgray;
+}
+
+form .inputField input::placeholder {
+  font-weight: 700;
+}
+
+form .inputField input.error {
+  background: url(./images/icon-error.svg) no-repeat 96%;
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+form .inputField input.error::placeholder {
+  color: var(--red);
+}
+
+button {
+  background-color: var(--green);
+  border: none;
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 600;
+  padding: 1em;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px 0px;
+}
+
+button:hover {
+  background-color: rgba(56, 204, 140, 0.7);
+  cursor: pointer;
+}
+
+.terms {
+  text-align: center;
+  padding: 0 3.5rem;
+  color: var(--grayish-blue);
+}
+
+.terms a {
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+@media (min-width: 765px) {
+  body {
+    display: flex;
+    background: var(--red) url(./images/bg-intro-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .upperText {
+    width: 95%;
+    text-align: left;
+  }
+
+  .upperText h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  .upperText p {
+    font-size: 1.6rem;
+  }
+
+  .col {
+    width: 50%;
+  }
+
+  form {
+    padding: 3rem;
+  }
+}
